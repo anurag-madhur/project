@@ -1,0 +1,26 @@
+
+<!doctype html>
+<html>
+   <body>
+
+      <h1 align="center">Login</h1>
+
+      {% if error %}
+      <p><strong>Error:</strong> {{ error }}
+      {% endif %}
+      <div align="center">
+        <form action = "" method = post>
+            <dl>
+                 <div class="form-group">
+                <input autocomplete="off" autofocus class="form-control" name="username" placeholder="Username/email" type="text"/>
+            </div>
+                <br/>
+                <div class="form-group">
+                <input class="form-control" name="password" placeholder="Password" type="password"/>
+            </div>
+            </dl>
+             <p><input type = submit value = Login></p>
+        </form>
+      </div>
+   </body>
+</html>

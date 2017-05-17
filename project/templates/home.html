@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+     border-right:1px solid #bbb;
+}
+
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover:not(.active) {
+    background-color: #4CAF50;
+}
+
+.active {
+    background-color: #4CAF50;
+}
+
+.container {
+    overflow: hidden;
+    background-color: #333;
+    font-family: Arial;
+}
+
+.container a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.dropdown {
+    float: left;
+    overflow: hidden;
+}
+
+.dropdown .dropbtn {
+    cursor: pointer;
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: #4CAF50;
+}
+
+.container a:hover, .dropdown:hover .dropbtn {
+    background-color: green;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #333;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    float: none;
+    color: green;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {
+    background-color: #333;
+}
+
+.show {
+    display: block;
+}
+header, footer {
+    padding: 1em;
+    color: black;
+    background-color: white;
+    clear: left;
+    text-align: center;
+}
+  body {
+    margin: 0 0 20px;
+  }
+  .footer {
+    position: absolute;
+    bottom: 0;
+    height: 20px;
+    background: #f0f0f0;
+    width: 100%;
+  }
+</style>
+</head>
+<body>
+
+<ul>
+   <div class="dropdown" style="float:right">
+    <button class="dropbtn" onclick="myFunction()">Profile</button>
+    <div class="dropdown-content" id="myDropdown">
+      <a href="logout">logout</a>
+    </div>
+  </div>
+</div>
+
+<script>
+/* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+  <li style="float:right"><a class="active" href="#contact">Contact</a></li>
+  <li style="float:right"><a class="active" href="#Projects">Projects</a></li>
+    
+</ul>
+<footer class="footer">Copyright &copy; Trantor.com</footer>
+
+</body>
+</html>

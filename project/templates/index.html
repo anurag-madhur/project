@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link href="http://getbootstrap.com/examples/jumbotron-narrow/jumbotron-narrow.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="">
+            <nav>
+                <ul class="nav nav-pills pull-right">
+                    </li>
+
+                </ul>
+            </nav>
+          <!--  <h3 class="text-muted">Python Flask App</h3> -->
+        </div>
+        <div class="jumbotron">
+
+            <h1>WELCOME</h1>
+            <p class="lead"></p>
+            <p><a class="active"  role="presentation" href="{{ url_for('register') }}">Sign up</a></p>
+            <p>Do you want to <a href = "{{ url_for('login') }}">
+         <b>log in?</b></a></p>
+
+        </div>
+
+
+</body>
+
+</html>
