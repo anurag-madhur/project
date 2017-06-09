@@ -2,11 +2,21 @@ from __future__ import print_function
 import tkinter as tk
 from tkinter import  messagebox
 from flask import Flask, flash, redirect, render_template, request, url_for
+from taiga import TaigaAPI
+import pdb
+import sys
+import pymysql
+api = TaigaAPI()
+
+api.auth(
+    username='anurag.madhur',
+    password='madhur@15'
+)
 
 root = tk.Tk()
 root.withdraw()
-import pymysql
-
+pdb.set_trace()
+new_project = api.projects
 app = Flask(__name__)
 
 db = pymysql.connect(host='localhost',database='users',user='root',password='madhur@9876',autocommit=True)
@@ -69,6 +79,8 @@ def register():
        else:
             return render_template('register.html')
 
-
+@app.route('/Projects')
+def Projects():
+    return render_template('projectList.html')
 if __name__ == "__main__":
     app.run()
